@@ -97,5 +97,13 @@ brew install tree
 brew install vbindiff
 brew install zopfli
 
+# Added by me
+brew install nvm
+brew install rbenv
+brew install direnv
+brew install imagesnap
+brew install s3cmd
+brew install awscli
+
 # Remove outdated versions from the cellar.
 brew cleanup

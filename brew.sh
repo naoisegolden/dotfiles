@@ -105,5 +105,39 @@ brew install imagesnap
 brew install s3cmd
 brew install awscli
 
+# Cask installs
+brew cask install 1password
+brew cask install adobe-acrobat-reader
+brew cask install atom
+brew cask install appcleaner
+brew cask install cyberduck
+brew cask install dropbox
+brew cask install firefox
+brew cask install google-chrome
+brew cask install gpg-suite
+brew cask install grandperspective
+brew cask install imageoptim
+brew cask install iterm2
+brew cask install keepingyouawake
+# brew cask install keka
+brew cask install licecap
+brew cask install postman
+brew cask install rescuetime
+brew cask install sequel-pro
+brew cask install sizeup
+brew cask install skitch
+# brew cask install skype
+brew cask install slack
+brew cask install smartconverter
+# brew cask install sourcetree
+brew cask install spectacle
+brew cask install spotify
+brew cask install time-out
+brew cask install transmission
+brew cask install tunnelblick
+brew cask install visual-studio-code
+brew cask install vlc
+brew cask install whatsapp
+
 # Remove outdated versions from the cellar.
 brew cleanup

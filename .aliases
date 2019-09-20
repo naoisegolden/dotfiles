@@ -14,8 +14,9 @@ alias -- -="cd -"
 # alias dt="cd ~/Desktop"
 alias d="cd ~/Development"
 alias g="git"
-alias a="/Applications/Atom.app/Contents/MacOS/Atom "
-alias v="/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron "
+alias atom="/Applications/Atom.app/Contents/MacOS/Atom "
+alias a="atom ."
+alias code="/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron "
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

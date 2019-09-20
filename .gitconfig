@@ -1,3 +1,10 @@
+[user]
+  name = Naoise Golden
+  email = naoise.golden@gmail.com
+
+[credential]
+  helper = osxkeychain
+
 [alias]
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits

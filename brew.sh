@@ -120,6 +120,7 @@ brew cask install imageoptim
 brew cask install iterm2
 brew cask install keepingyouawake
 # brew cask install keka
+brew cask install libreoffice
 brew cask install licecap
 brew cask install postman
 brew cask install rescuetime

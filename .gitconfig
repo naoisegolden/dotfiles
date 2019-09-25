@@ -2,6 +2,12 @@
   name = Naoise Golden
   email = naoise.golden@gmail.com
 
+[init]
+  templatedir = "~/.git-templates"
+  # Make sure the hooks are executable and re-initialize repos
+  # $ chmod a+x ~/.git-templates/hooks/*
+  # $ git init
+
 [credential]
   helper = osxkeychain
 

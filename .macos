@@ -135,6 +135,9 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 # defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
 # defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 
+# Mouse: Enable swipe between pages
+defaults write NSGlobalDomain AppleEnableMouseSwipeNavigateWithScrolls -bool true
+
 # Mouse: increase tracking speed
 defaults write NSGlobalDomain com.apple.mouse.scaling 3.5
 

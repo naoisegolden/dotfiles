@@ -104,6 +104,7 @@ brew install direnv
 brew install imagesnap
 brew install s3cmd
 brew install awscli
+brew install yarn
 
 # Cask installs
 brew cask install 1password

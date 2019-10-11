@@ -159,6 +159,9 @@
 	# Detect copies as well as renames
 	renames = copies
 
+  # Removes the silly `a/` and `b/` prefixes
+  noprefix = true
+
 [diff "bin"]
 
 	# Use `hexdump` to diff binary files

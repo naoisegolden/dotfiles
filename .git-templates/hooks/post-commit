@@ -1,4 +1,49 @@
 #!/bin/sh
 
-# Copy last commit hash to clipboard on commit
-git log -1 --format=format:%h | pbcopy
+### goes in .git/hooks/post-commit
+
+### lolcommits hook (begin) ###
+### gem install lolcommits
+# if [ ! -d "$GIT_DIR/rebase-merge" ]; then
+#   export LANG="en_US.UTF-8"
+#   export LOLCOMMITS_DELAY=1
+#   # export PATH=~/.rbenv/versions/2.2.5/bin:/usr/local/bin:$PATH
+#   LOLCOMMITS_DIR=~/lolcommits/images/ lolcommits --capture
+#   LOLCOMMITS_DIR=~/lolcommits/gifs/ lolcommits --capture --animate 4
+# fi
+###  lolcommits hook (end)  ###
+
+### Gitshots to TUMBLR
+### gem install tumblr_client
+# https://coderwall.com/p/njfmwa/take-a-picture-of-you-and-upload-it-to-tumblr-via-post-commit
+/usr/bin/env ruby <<-EORUBY
+  ### #!/usr/bin/env ruby
+  require 'tumblr_client'
+
+  # https://www.tumblr.com/oauth/apps to get consumer key and secret
+  # https://api.tumblr.com/console/calls/user/info to get oauth tokens
+  Tumblr.configure do |config|
+    config.consumer_key = "XXXX"
+    config.consumer_secret = "XXXX"
+    config.oauth_token = "XXXX"
+    config.oauth_token_secret = "XXXX"
+  end
+
+  client = Tumblr::Client.new
+
+  file="/Absolute/path/to/imagesnap-commits/#{Time.now.to_i}.jpg"
+  puts "Taking capture into #{file}!"
+  system "imagesnap -q -w 2 #{file}"
+
+  Process.fork {
+    client.photo('your-tumblr.tumblr.com', :data => [file])
+  }
+  exit 0
+EORUBY
+### End of Gitshots to TUMBLR
+
+### Git video
+# first install https://github.com/matthutchinson/videosnap
+now=$(date +"%Y%m%d-%s")
+videosnap -t 5 -p High ~/videosnap-commits/$now.mov
+### End git video
